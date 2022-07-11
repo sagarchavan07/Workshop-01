@@ -4,12 +4,11 @@ import javax.swing.*;
 
 public class Anagrams {
     public static void main(String[] args) {
-        boolean anagram=true;
+        boolean anagrams=true;
 
         String str1="abcdz";
         String str2="bczad";
-
-        if (str2.length() == str2.length())
+        if (str1.length() == str2.length())
         {
             for (int i = 0; i < str1.length(); i++) {
                 int checkcount=0;
@@ -19,14 +18,20 @@ public class Anagrams {
                     }
                 }
                 if (checkcount == 0) {
-                    anagram=false;
+                    anagrams=false;
                 }
             }
         }else {
-            anagram=false;
+            anagrams=false;
         }
 
-        System.out.println("Anagram : "+anagram);
+
+
+        if (anagrams){
+            System.out.println("Strings are Anagrams");
+        }else {
+            System.out.println("Strings are not  Anagrams");
+        }
 
     }
 
